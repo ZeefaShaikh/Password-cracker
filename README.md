@@ -17,12 +17,21 @@ This project is written in plain **Python 3** and uses only standard library mod
    git clone https://github.com/ZeefaShaikh/Password-Cracker.git
 2.Open the project folder:
 cd Password-Cracker
+
+
 3.(Optional) Create a virtual environment:
+
 python -m venv .venv
+
 #mac / linux
+
 source .venv/bin/activate
+
 #windows (powershell)
+
 .\.venv\Scripts\Activate.ps1
+
+
 4.Run the script:
 python password_cracker.py
 
@@ -30,30 +39,47 @@ python password_cracker.py
 ## Usage
 When you run the script, you will be able to generate a strong password by choosing a length and options (uppercase, lowercase, digits, symbols). The demo cracking routines show how a simple brute-force or dictionary approach attempts to find short/weak passwords — these demos are intentionally small and not optimized for real attacks. Use the tool to experiment with password strength and to learn which kinds of passwords are safer.
 
+
 ## Example commands
 -Generate a password (interactive):
 python password_cracker.py
+
 -Example (if script supports CLI flags—adapt if needed):
+
 python password_cracker.py --generate --length 16
+
 python password_cracker.py --demo brute-force --target weakpass
+
 
 ## Educational note & responsible use
 This repository exists for learning. Do not use the cracking code against accounts, systems, or data you do not own or have explicit permission to test. Always act ethically and follow the law.
 
+
 ## Future enhancements
+
 -Add CLI argument parsing for more flexible usage.
+
 -Add a small GUI (Tkinter) for non-technical users.
+
 -Add optional wordlist-based demos (kept separate and small).
+
 -Add unit tests for core functions.
+
 
 ## Contributing
 Contributions are welcome. If you want to help, fork the repo, create a branch, make your changes, and open a pull request. Please keep changes small, document new features, and include examples or tests when appropriate.
 
+
 ## Example workflow:
+
 git checkout -b feature/my-feature
+
 #make changes
+
 git commit -m "Describe change"
+
 git push origin feature/my-feature
+
 #then open a pull request on GitHub
 
 ## License
