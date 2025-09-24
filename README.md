@@ -1,103 +1,77 @@
-project:
-  name: "Password Cracker"
-  short_name: "password-cracker"
-  emoji: "🔐"
-  repo_url: "https://github.com/ZeefaShaikh/Password-Cracker"
-  description: >
-    Password Cracker is an educational Python tool to demonstrate password
-    security and generation. It can generate strong random passwords and
-    includes simple cracking examples (brute-force / dictionary) for learning
-    how weak passwords are vulnerable. Intended for learning and testing only.
+# Password Cracker 🔐
 
-badges:
-  license: "https://img.shields.io/badge/license-MIT-blue.svg"
+Password Cracker is a simple, educational Python project designed to demonstrate password generation and basic cracking concepts so you can learn why strong passwords matter. The tool can generate strong random passwords and includes small demo routines (safe, limited-scope) that show how weak passwords can be discovered by brute-force or dictionary-style approaches — intended strictly for learning and testing on your own data.
 
-metadata:
-  authors:
-    - name: "Zeefa Shaikh"
-      github: "ZeefaShaikh"
-  license:
-    spdx: "MIT"
-    url: "https://opensource.org/licenses/MIT"
-  last_updated: "2025-09-24"
+## Features
+- Generate strong random passwords with configurable length (letters, digits, symbols).
+- Small demo routines that illustrate brute-force and dictionary-style cracking for educational purposes only.
+- Lightweight, single-file script so you can read and modify the code easily.
+- Clear examples and options for beginners to learn about password security.
 
-prerequisites:
-  - "Python 3.8+ installed"
-  - "Optional: virtualenv for isolated environment"
+## Tech stack
+This project is written in plain **Python 3** and uses only standard library modules (`random`, `string`, etc.), so there are no external dependencies unless you add optional features.
 
-installation:
-  recommended_workflow:
-    - step: "Clone repository"
-      command: "git clone https://github.com/ZeefaShaikh/Password-Cracker.git"
-    - step: "Change to project directory"
-      command: "cd Password-Cracker"
-    - step: "Create virtual environment (recommended)"
-      command: "python -m venv .venv && source .venv/bin/activate  # mac/linux\npython -m venv .venv && .\\.venv\\Scripts\\activate  # windows"
-    - step: "Install optional dependencies (if any)"
-      command: "pip install -r requirements.txt  # create requirements.txt only if needed"
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ZeefaShaikh/Password-Cracker.git
+Open the project folder:
 
-usage:
-  basic:
-    description: "Run the main script to generate passwords or try demo cracking routines."
-    commands:
-      - "python password_cracker.py            # interactive mode / generate password"
-  options_and_examples:
-    - name: "Generate password with length 16"
-      command: "python password_cracker.py --generate --length 16"
-    - name: "Run demo brute-force (educational, small scope)"
-      command: "python password_cracker.py --demo brute-force --target weakpass"
-  notes: >
-    Always use this tool ethically for learning and testing on your own accounts/data.
-    Brute-force examples are limited for demonstration and are not optimized for real attacks.
+bash
+Copy code
+cd Password-Cracker
+(Optional) Create a virtual environment:
 
-features:
-  - "Strong password generation: letters, digits, symbols, configurable length"
-  - "Simple demonstrations of cracking approaches (dictionary & brute-force) for education"
-  - "Lightweight, single-file script for easy reading and modification"
+bash
+Copy code
+python -m venv .venv
+# mac / linux
+source .venv/bin/activate
+# windows (powershell)
+.\.venv\Scripts\Activate.ps1
+Run the script:
 
-files:
-  important:
-    - "password_cracker.py       # main script"
-    - "README.md                 # human-readable project documentation"
-    - "LICENSE                   # MIT license"
-  optional:
-    - "wordlists/                # optional dictionary files (not included by default)"
-    - "examples/                 # sample inputs or demonstration runs"
+bash
+Copy code
+python password_cracker.py
+Usage
+When you run the script, you will be able to generate a strong password by choosing a length and options (uppercase, lowercase, digits, symbols). The demo cracking routines show how a simple brute-force or dictionary approach attempts to find short/weak passwords — these demos are intentionally small and not optimized for real attacks. Use the tool to experiment with password strength and to learn which kinds of passwords are safer.
 
-screenshots:
-  - path: "Screenshots/home.png"
-    caption: "Password generator output example"
-  - path: "Screenshots/demo_crack.png"
-    caption: "Demo brute-force progress (educational)"
+Example commands
+Generate a password (interactive):
 
-contributing:
-  summary: >
-    Contributions welcome. Fork the repo, create a feature branch, and open a PR.
-    Keep changes small and documented. Add tests/examples where appropriate.
-  steps:
-    - "Fork the repository"
-    - "git checkout -b feature/your-feature"
-    - "Make changes and commit with clear message"
-    - "git push origin feature/your-feature"
-    - "Open a Pull Request describing your change"
+bash
+Copy code
+python password_cracker.py
+Example (if script supports CLI flags—adapt if needed):
 
-security_and_responsibility:
-  - "This repository is for educational use only."
-  - "Do not use cracking tools on systems you do not own or have explicit permission to test."
-  - "Report any security issues to the repo owner via GitHub issues."
+bash
+Copy code
+python password_cracker.py --generate --length 16
+python password_cracker.py --demo brute-force --target weakpass
+Educational note & responsible use
+This repository exists for learning. Do not use the cracking code against accounts, systems, or data you do not own or have explicit permission to test. Always act ethically and follow the law.
 
-future_plan:
-  - "Add CLI flags and argument parsing for all demo modes"
-  - "Add unit tests for core functions (generation & helpers)"
-  - "Add optional GUI (Tkinter or simple web UI) for easier use"
-  - "Provide example wordlists in a separate release if desired"
+Future enhancements
+Add CLI argument parsing for more flexible usage.
 
-license:
-  type: "MIT"
-  text_short: "Permissive open-source license allowing reuse with attribution."
-  url: "https://opensource.org/licenses/MIT"
+Add a small GUI (Tkinter) for non-technical users.
 
-contact:
-  - type: "github"
-    handle: "ZeefaShaikh"
-    url: "https://github.com/ZeefaShaikh"
+Add optional wordlist-based demos (kept separate and small).
+
+Add unit tests for core functions.
+
+Contributing
+Contributions are welcome. If you want to help, fork the repo, create a branch, make your changes, and open a pull request. Please keep changes small, document new features, and include examples or tests when appropriate.
+
+Example workflow:
+
+bash
+Copy code
+git checkout -b feature/my-feature
+# make changes
+git commit -m "Describe change"
+git push origin feature/my-feature
+# then open a pull request on GitHub
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
